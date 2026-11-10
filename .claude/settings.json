@@ -10,6 +10,8 @@
       "Bash(npx rea-agents:*)",
       "Bash(npx bla-agents:*)",
       "Bash(scripts/verify.sh)",
+      "Bash(scripts/format.sh)",
+      "Bash(./run.sh)",
       "Read",
       "Grep",
       "Glob"
@@ -20,13 +22,14 @@
     ]
   },
   "hooks": {
+    "PreToolUse": [
+      { "matcher": "Bash", "hooks": [ { "type": "command", "command": ".claude/hooks/pre-tool-use.sh" } ] }
+    ],
+    "PostToolUse": [
+      { "matcher": "Edit|Write", "hooks": [ { "type": "command", "command": ".claude/hooks/post-tool-use.sh" } ] }
+    ],
     "Stop": [
-      {
-        "matcher": "*",
-        "hooks": [
-          { "type": "command", "command": ".claude/hooks/verify.sh" }
-        ]
-      }
+      { "matcher": "*", "hooks": [ { "type": "command", "command": ".claude/hooks/verify.sh" } ] }
     ]
   }
 }

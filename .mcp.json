@@ -1,0 +1,6 @@
+{
+  "mcpServers": {
+    "rea": { "command": "npx", "args": ["-y", "rea-agents@latest", "mcp"] },
+    "bla": { "command": "npx", "args": ["-y", "bla-agents@latest", "mcp"] }
+  }
+}
