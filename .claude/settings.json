@@ -1,0 +1,32 @@
+{
+  "model": "fable",
+  "modelSettings": {
+    "fable": { "effortLevel": "high" }
+  },
+  "maxEffortLevel": "xhigh",
+  "advisorModel": "fable",
+  "permissions": {
+    "allow": [
+      "Bash(npx rea-agents:*)",
+      "Bash(npx bla-agents:*)",
+      "Bash(scripts/verify.sh)",
+      "Read",
+      "Grep",
+      "Glob"
+    ],
+    "deny": [
+      "Edit(tests/**)",
+      "Bash(rm -rf:*)"
+    ]
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "*",
+        "hooks": [
+          { "type": "command", "command": ".claude/hooks/verify.sh" }
+        ]
+      }
+    ]
+  }
+}
