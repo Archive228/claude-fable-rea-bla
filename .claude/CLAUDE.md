@@ -6,6 +6,7 @@ Main model is Fable 5.2. Start effort at `high`; drop to `medium` for quick, wel
 
 ## The loop
 
+0. Map first. On an unfamiliar or large codebase, build the graph with graphify (`/graphify .`, the map-first skill), read `graphify-out/GRAPH_REPORT.md`, and answer "how does A reach B" with `graphify path` / `graphify query` instead of grepping. Edges tagged `INFERRED` are leads to check, not facts.
 1. Understand first. Before changing a build, a binary, or an unfamiliar dependency, open it with REA (`rea` MCP / the reverse-engineer-anything skill) and write down what it actually does.
 2. Build the change.
 3. Before any release, harden the shipped build with BLA (`bla harden .`) so the `.bla-hardened/` output goes out, not the raw build.

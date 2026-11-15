@@ -7,6 +7,7 @@
   "advisorModel": "fable",
   "permissions": {
     "allow": [
+      "Bash(graphify:*)",
       "Bash(npx rea-agents:*)",
       "Bash(npx bla-agents:*)",
       "Bash(scripts/verify.sh)",

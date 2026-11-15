@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# The loop runner: understand -> build -> harden -> verify.
+# The loop runner: map -> understand -> build -> harden -> verify.
 set -euo pipefail
 echo "1/2  verifying current state"
 .claude/hooks/verify.sh
